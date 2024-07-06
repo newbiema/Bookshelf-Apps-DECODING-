@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Bookshelf Apps</title>
+  </head>
+  <body>
+    <header>
+      <h2>Bookshelf Apps</h2>
+      <img src="img/header.png" alt="icon" width="50px" height="50px">
+      
+    </header>
+
+    <div class="container">
+      <div class="card bg-primary">
+        <h3 class="text-header">Form Tambah Buku</h3>
+        <form id="formTambahBuku" autocomplete="off">
+          <div>
+            <label for="inputTitle">
+              <span>📖</span>
+              <b>Nama Buku</b>
+            </label>
+            <input class="buku-input" type="text" id="inputTitle" required />
+          </div>
+          <div>
+            <label for="inputAuthor">
+              <span>🙍‍♂️</span>
+              <b>Penulis</b>
+            </label>
+            <input class="buku-input" type="text" id="inputAuthor" required />
+          </div>
+          <div>
+            <label for="inputYear">
+              <span>📅</span>
+              <b>Tahun</b>
+            </label>
+            <input class="buku-input" type="number" id="inputYear" required />
+          </div>
+          <div>
+            <label for="inputComplete">Selesai Dibaca</label>
+            <input type="checkbox" id="inputComplete" />
+          </div>
+          <button class="tombol" id="">
+            Masukkan Ke Rak <span>Belum</span> Dibaca
+          </button>
+        </form>
+
+        <hr />
+
+        <h3 class="text-header my">Cari Buku</h3>
+        <form class="form-cari" id="formCariBuku" autocomplete="off">
+          <input
+            class="buku-input"
+            type="search"
+            id="inputCari"
+            placeholder="cari berdasarkan judul"
+          />
+          <button class="tombol">🔍</button>
+        </form>
+      </div>
+
+      <div class="card bg-info">
+        <h3 class="text-header">Belum Selesai Dibaca</h3>
+        <div id="rakBukuSedangDibaca"></div>
+      </div>
+
+      <div class="card bg-success">
+        <h3 class="text-header">Selesai Dibaca</h3>
+        <div id="rakBukuSelesaiDibaca"></div>
+      </div>
+    </div>
+  </body>
+</html>
